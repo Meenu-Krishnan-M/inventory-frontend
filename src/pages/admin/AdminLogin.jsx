@@ -53,6 +53,15 @@ function AdminLogin() {
 
   return (
     <>
+     <style>
+                {`
+                    .form-control::placeholder {
+                        color:#777d78!important; 
+                        opacity:1;
+                    }
+                `}
+            </style>
+
       <div className='' style={{ width: '100%', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundImage: 'url(https://static.vecteezy.com/system/resources/previews/035/163/758/non_2x/ai-generated-warehouse-interior-with-boxes-and-wooden-pallets-3d-rendering-warehouse-ai-generated-free-photo.jpg)' }}>
 
         <div className='container'>
@@ -70,10 +79,10 @@ function AdminLogin() {
                     }}
                   >ADMIN</h2>
                     <div className="mb-3">
-                      <input value={userDetails.username} onChange={(e) => setuserDetails({ ...userDetails, username: e.target.value })} type="text" placeholder='Admin Name' className='form-control rounded-2 text-secondary bg-dark' />
+                      <input value={userDetails.username} onChange={(e) => setuserDetails({ ...userDetails, username: e.target.value })} type="text" placeholder='Admin Name' className='form-control rounded-2 text-primary bg-dark' />
                     </div>
                     <div className="mb-3">
-                      <input value={userDetails.password} onChange={(e) => setuserDetails({ ...userDetails, password: e.target.value })} type="password" placeholder='Password' className='form-control text-secondary rounded-2 bg-dark' />
+                      <input value={userDetails.password} onChange={(e) => setuserDetails({ ...userDetails, password: e.target.value })} type="password" placeholder='Password' className='form-control text-primary rounded-2 bg-dark' />
                     </div>
                     <div className="mb-3">
                       <div>
