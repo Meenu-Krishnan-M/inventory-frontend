@@ -8,6 +8,7 @@ import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 
 function SalesBoard() {
+  
   const [searchKey, setSearchKey] = useState('');
   const [searchedProducts, setSearchedProducts] = useState([]);
   const [selectedProducts, setSelectedProducts] = useState([]);
@@ -16,6 +17,7 @@ function SalesBoard() {
   const navigate = useNavigate();
   const userDetails = JSON.parse(sessionStorage.getItem('staffs'));
   const staffName = userDetails?.username || 'Staff';
+
 
   const getSearchedProducts = async (searchKey) => {
     if (searchKey && sessionStorage.getItem('token')) {
@@ -82,6 +84,7 @@ function SalesBoard() {
 
   const handleLogout = () => {
     sessionStorage.clear();
+    alert('Logging out....')
     navigate('/');
   };
 

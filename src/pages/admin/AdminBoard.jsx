@@ -101,7 +101,7 @@ function AdminBoard() {
                         </div>
                     </div>
 
-                    {/* Search Bar + Table */}
+                    {/* Search Bar */}
                     <div className="row mt-5 md:m-5 m-2">
                         <div className="col-md-4 mb-3 ms-auto">
                             <Form.Control
@@ -114,6 +114,7 @@ function AdminBoard() {
                                 }}
                             />
                         </div>
+                        {/* Table  */}
                         <Table striped bordered variant="light" hover size="sm">
                             <thead>
                                 <tr>
@@ -147,7 +148,7 @@ function AdminBoard() {
                                 {[...Array(totalPages)].map((_, idx) => (
                                     <Pagination.Item
                                         key={idx + 1}
-                                        active={currentPage === idx + 1}
+                                        active={currentPage == idx + 1}
                                         onClick={() => handlePageChange(idx + 1)}
                                     >
                                         {idx + 1}
